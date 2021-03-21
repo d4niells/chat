@@ -15,8 +15,8 @@ jobs:
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_SUPER_CHAT_3F0A9 }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_DISCORDO_CHAT }}'
           channelId: live
-          projectId: super-chat-3f0a9
+          projectId: discordo-chat
         env:
           FIREBASE_CLI_PREVIEWS: hostingchannels

@@ -3,13 +3,13 @@ import 'firebase/firestore';
 import 'firebase/auth';
 
 firebase.initializeApp({
-  apiKey: process.env.REACT_APP_FIREBASE_API,
-  authDomain: "super-chat-3f0a9.firebaseapp.com",
-  projectId: "super-chat-3f0a9",
-  storageBucket: "super-chat-3f0a9.appspot.com",
-  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGE,
-  appId: process.env.REACT_APP_FIREBASE_APP_ID,
-  measurementId: "G-3B997LC8DF"
+  apiKey: "AIzaSyAEUOCECC1xIA_pvI5mEmsKVnFtTqONUME",
+  authDomain: "discordo-chat.firebaseapp.com",
+  projectId: "discordo-chat",
+  storageBucket: "discordo-chat.appspot.com",
+  messagingSenderId: "493551592358",
+  appId: "1:493551592358:web:a228f75a0f4e45beaae567",
+  measurementId: "G-E24YF975BZ"
 });
 
 const auth = firebase.auth();

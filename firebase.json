@@ -1,7 +1,6 @@
 {
   "hosting": {
-    "site": "discordo",
-    "public": "public",
+    "public": "build",
     "ignore": [
       "firebase.json",
       "**/.*",
