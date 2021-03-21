@@ -67,7 +67,7 @@ function ChatRoom() {
       text: formValue,
       createdAt: firebase.firestore.FieldValue.serverTimestamp(),
       uid: auth.currentUser?.uid ?? null,
-      photoURL: auth.currentUser?.photoURL ?? ''
+      photoURL: auth.currentUser?.photoURL ?? 'https://static.wixstatic.com/media/ee9011_fe10512423f94364a8cbe6b01773a29f~mv2.png/v1/fill/w_1210,h_544,al_c,q_90/ee9011_fe10512423f94364a8cbe6b01773a29f~mv2.webp'
     })
 
     setFormValue('');
