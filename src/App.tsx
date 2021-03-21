@@ -11,6 +11,7 @@ export default function App() {
   return (
     <div className="App">
       <header>
+        <h1>⚛️🔥💬</h1>
         <SignOut />
       </header>
       <section>{user ? <ChatRoom /> : <SignIn />}</section>
@@ -26,7 +27,7 @@ function SignIn() {
 
   return (
     <div>
-      <button onClick={signInWithGoogle}>Sign in with Google</button>
+      <button className="sign-in" onClick={signInWithGoogle}>Sign in with Google</button>
     </div>
   );
 }
@@ -39,7 +40,7 @@ function SignOut() {
   return (
     auth.currentUser && (
       <div>
-        <button onClick={handleSignOut}>Sign Out</button>
+        <button className="sign-out" onClick={handleSignOut}>Sign Out</button>
       </div>
     )
   );
@@ -80,12 +81,12 @@ function ChatRoom() {
         {messages &&
           messages.map((msg) => <ChatMessage key={msg.id} message={msg} />)}
 
-        <div ref={dummy}></div>
+        <span ref={dummy}></span>
       </main>
 
       <form onSubmit={handleSendMessage}>
         <input value={formValue} onChange={handleChangeInput} />
-        <button type="submit">submit</button>
+        <button type="submit" disabled={!formValue}>🕊️</button>
       </form>
     </div>
   );
@@ -99,7 +100,7 @@ interface IChatMessage {
 function ChatMessage(props: IChatMessage) {
   const { text, uid, photoURL } = props.message;
 
-  const messageClass = uid === auth.currentUser?.uid ? 'send' : 'received';
+  const messageClass = uid === auth.currentUser?.uid ? 'sent' : 'received';
 
   return (
     <div className={`message ${messageClass}`}>
